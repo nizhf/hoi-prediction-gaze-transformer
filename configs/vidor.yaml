@@ -1,0 +1,32 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+# VidOR dataset
+# parent
+# ├── hoi-prediction
+# └── datasets
+#     └── VidOR  ← downloads here
+#         └── frames
+#         └── labels
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+# path: /mnt/DATA/datasets/VidOR/
+path: G:/datasets/VidOR  # dataset root dir
+train: yolov5_train_manually.txt  # train images (relative to 'path')
+# train: yolov5_train_vidhoi.txt  # train images (relative to 'path')
+# val: yolov5_val_manually.txt  # val images (relative to 'path')
+val: yolov5_val_vidhoi.txt  # val images (relative to 'path')
+test:  # test images (optional)
+
+# Classes
+nc: 78  # number of classes
+names: ["person", "car", "guitar", "chair", "handbag", "toy", "baby_seat", "cat", 
+        "bottle", "backpack", "motorcycle", "ball/sports_ball", "laptop", "table", 
+        "surfboard", "camera", "sofa", "screen/monitor", "bicycle", "vegetables", 
+        "dog", "fruits", "cake", "cellphone", "cup", "bench", "snowboard", "skateboard", 
+        "bread", "bus/truck", "ski", "suitcase", "stool", "bat", "elephant", "fish", 
+        "baby_walker", "dish", "watercraft", "scooter", "pig", "refrigerator", "horse", 
+        "crab", "bird", "piano", "cattle/cow", "lion", "chicken", "camel", "electric_fan", 
+        "toilet", "sheep/goat", "rabbit", "train", "penguin", "hamster/rat", "snake", 
+        "frisbee", "aircraft", "oven", "racket", "faucet", "antelope", "duck", "stop_sign", 
+        "sink", "kangaroo", "stingray", "turtle", "tiger", "crocodile", "bear", "microwave", 
+        "traffic_light", "panda", "leopard", "squirrel"]  # class names

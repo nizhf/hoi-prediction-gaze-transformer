@@ -1,0 +1,3 @@
+# Object Tracking Module
+## Yolov5 + Deep Sort with PyTorch
+This module is modified based on the [YOLOv5 + Deep SORT with PyTorch](https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch) repository, which contains a two-stage object tracker. [YOLOv5](https://github.com/ultralytics/yolov5) is used to generate detections. Then the [Deep SORT](https://arxiv.org/abs/1703.07402) algorithm is applied to track the objects. This repo uses [Torchreid](https://github.com/KaiyangZhou/deep-person-reid) as the feature extractor. To enable using DeepSORT as a module, we remove reid submodule and only keep the necessary codes.  

@@ -1,0 +1,55 @@
+random_seed: 1551  # seed for RNG
+img_size: 640  # for yolov5 perprocessing
+yolov5_stride: 32  # should come from yolov5 model
+train_ratio: 1.0
+sampling_mode: "anticipation"  # data sampling mode: clip, window, anticipation
+future_num: 1  # number of frames in the future
+future_type: "all"  # action, spatial, or all
+future_ratio: 0.5  # ratio of selecting the anticipation with interaction change 
+color_jitter: False  # color jitter
+hflip_p: 0.5  # ratio of horizontally flipping the frames during training
+min_clip_length: 1
+max_clip_length: 16
+max_human_num: 20
+max_interaction_pairs: 3200  # if exceed, skip due to GPU Memory
+max_interaction_pairs_per_frame: 25  # if exceed, skip due to GPU Memory
+batch_size: 16  # batch size
+batch_size_val: 16
+dim_gaze_heatmap: 64
+dim_transformer_ffn: 2048
+# dim_transformer_ffn: 3072
+sttran_enc_layer_num: 1
+sttran_dec_layer_num: 3
+sttran_sliding_window: 6
+mlp_projection: False  # MLP in input embedding
+sinusoidal_encoding: True  # sinusoidal positional encoding
+separate_head: True
+split_window: "pair"  # no, person, pair
+init_lr: 1.0e-8
+peak_lr: 1.0e-4
+final_lr: 1.0e-6
+final_lr_scale: 0.1
+decay_steps: 20
+dropout: 0.1
+weight_decay: 1.0e-2
+clip_norm_max: 1.0e-2
+clip_norm_type: 2
+# loss_type: "mlm"
+# loss_type: "bce"
+loss_type: "focal"
+# loss_balance_type: "inverse"
+# loss_balance_type: "neg_pos"
+loss_balance_type: "effective"
+# loss_balance_type: "no"
+# loss_balance_power: 0.5  # inverse of square root number of samples
+loss_balance_power: 1.0  # inverse of number of samples
+loss_balance_beta: 0.9999  # beta for inverse of effective number of samples
+loss_focal_gamma: 0.5  # gamma for focal loss
+early_metric: "no"  # early stopping metric: loss, map, recall, no
+early_patience: 3
+early_min_epoch: 10
+early_min_improvement: 1.0e-8
+interaction_conf_threshold: [0.5]
+eval_k: [10, 20, 50]
+rare_limit: 25
+iou_threshold: 0.5

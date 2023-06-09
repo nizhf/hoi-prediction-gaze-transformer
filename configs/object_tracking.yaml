@@ -1,0 +1,17 @@
+DEEPSORT:
+  # WEIGHT_PATH: "weights/deep_sort/ckpt.t7"
+  MODEL_TYPE: "osnet_x1_0"
+  MAX_DIST: 0.2
+  MIN_CONFIDENCE: 0.3
+  NMS_MAX_OVERLAP: 0.5
+  MAX_IOU_DISTANCE: 0.7
+  MAX_AGE: 70
+  MAX_TIME_SINCE_UPDATE: 3
+  N_INIT: 3
+  NN_BUDGET: 100
+
+YOLOv5:
+  # WEIGHT_PATH: "weights/yolov5/yolov5l.pt"
+  CONF_THRESHOLD: 0.4
+  IOU_THRESHOLD: 0.5
+  

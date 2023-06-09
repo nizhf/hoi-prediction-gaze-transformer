@@ -1,0 +1,21 @@
+random_seed: 1551  # seed for RNG
+img_size: 640  # for yolov5 perprocessing
+yolov5_stride: 32  # should come from yolov5 model
+sampling_mode: "anticipation"  # data sampling mode: clip, window, anticipation
+future_num: 7  # number of frames in the future
+min_clip_length: 1
+max_clip_length: 16
+max_human_num: 20
+batch_size: 1  # batch size
+dim_gaze_heatmap: 64
+dim_transformer_ffn: 2048
+# dim_transformer_ffn: 3072
+sttran_enc_layer_num: 1
+sttran_dec_layer_num: 3
+sttran_sliding_window: 6
+mlp_projection: False  # MLP in input embedding
+sinusoidal_encoding: True  # sinusoidal positional encoding
+separate_head: True
+split_window: "pair"  # no, person, pair
+# loss_type: "mlm"
+loss_type: "bce"
