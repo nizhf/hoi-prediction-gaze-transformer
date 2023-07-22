@@ -330,7 +330,7 @@ def main(opt):
             # process output
             frame_ids = list(frame_ids_queue)
             # window-wise result entry
-            out_im_idx = out_im_idxes[0]
+            out_im_idx = len(frame_ids) - 1
             window_anno = {
                 "video_name": video_name,  # video name
                 "frame_id": frame_ids[out_im_idx],  # this frame id
@@ -363,7 +363,7 @@ def main(opt):
                     window_prediction["bboxes"] = entry["bboxes"][det_out_idxes, 1:].numpy().tolist()
                     window_prediction["pred_labels"] = entry["pred_labels"][det_out_idxes].cpu().numpy().tolist()
                     window_prediction["confidences"] = entry["confidences"][det_out_idxes].numpy().tolist()
-                    window_prediction["ids"] = np.array(entry["ids"])[det_out_idxes].tolist()
+                    window_prediction["ids"] = torch.LongTensor(entry["ids"])[det_out_idxes].numpy().tolist()
 
                     pair_out_idxes = entry["im_idxes"] == out_im_idx
                     # case 3, no human-object pair detected (no human or no object), pair_idxes and distribution []

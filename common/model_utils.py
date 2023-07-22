@@ -420,7 +420,10 @@ def construct_sliding_window(entry, sampling_mode, sliding_window, pair_idx_offs
         windows_gt = []
         window_len_gt = len(entry["im_idxes_gt"])
     else:
-        im_idx_max = torch.max(entry["im_idxes"])
+        if len(entry["im_idxes"]) > 0:
+            im_idx_max = torch.max(entry["im_idxes"])
+        else:
+            im_idx_max = -1  # no valid human-object pairs in this window, skip
     windows = []
     interaction_gt_dict = {}
     # clip mode, sliding window for all frames
