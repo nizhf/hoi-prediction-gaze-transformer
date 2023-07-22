@@ -8,7 +8,7 @@ import time
 import torchvision
 
 from .yolov5.models.common import DetectMultiBackend
-from .yolov5.utils.general import scale_coords, xyxy2xywh, xywh2xyxy
+from .yolov5.utils.general import scale_boxes, xyxy2xywh, xywh2xyxy
 from .yolov5.utils.metrics import box_iou
 from .deep_sort.deep_sort import DeepSort
 
@@ -67,6 +67,8 @@ class ObjectDetectionYolov5:
         """
         # detect objects
         pred = self.yolov5_model(frame)
+        if isinstance(pred, (list, tuple)):
+            pred = pred[0]  # latest YOLOv5 model outputs [inference_out, loss_out] in validation mode
         pred = non_max_suppression(pred, self.conf_thres, self.iou_thres, classes=self.classes, time_limit=1.0)
         # process detection results
         bbox_list = []
@@ -75,7 +77,7 @@ class ObjectDetectionYolov5:
         for detected in pred:
             if detected is not None and len(detected) > 0:
                 # rescale bboxes from down-scaled size to original size
-                detected[:, :4] = scale_coords(frame.shape[2:], detected[:, :4], original_frame.shape[:2])
+                detected[:, :4] = scale_boxes(frame.shape[2:], detected[:, :4], original_frame.shape[:2])
                 bbox_list.append(detected[:, :4])
                 label_list.append(detected[:, 5])
                 confidence_list.append(detected[:, 4])
