@@ -63,6 +63,9 @@ def assign_human_head_frame(
 ):
     # {person id: head bbox} of this frame
     head_bbox_dict = {}
+    # no human detected, return empty dict
+    if len(human_bboxes) == 0:
+        return head_bbox_dict
     # no head detected, return empty assignment
     if len(head_bboxes) == 0:
         head_bbox_dict = {human_id: [] for human_id in human_ids}
