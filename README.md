@@ -21,13 +21,13 @@ On Action Genome (PredCls mode):
 ## Install
 1. Clone the repository recursively:  
 `git clone --recurse-submodules https://github.com/nizhf/hoi-prediction-gaze-transformer.git`
-2. Create conda environment:  
+2. Create conda environment. We use mamba to accelerate the installation. In addition, as issue [#7](https://github.com/nizhf/hoi-prediction-gaze-transformer/issues/7), opencv in conda-forge seems to be incompatible with torchvision 0.11.0, so we install opencv via pip.  
 ```
-# Using mamba is much faster than conda
 conda install mamba -c conda-forge  # install mamba in base environment
 mamba create -n hoi_torch110 python=3.9 -c conda-forge 
 conda activate hoi_torch110  
-mamba install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 torchtext==0.11.0 cudatoolkit=11.3 matplotlib numpy opencv Pillow PyYAML requests scipy tqdm tensorboard wandb pandas seaborn Cython easydict gdown scikit-learn imageio notebook ipywidgets black -c pytorch -c conda-forge
+mamba install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 torchtext==0.11.0 cudatoolkit=11.3 black Cython easydict gdown imageio ipywidgets matplotlib notebook numpy pandas Pillow PyYAML requests scikit-learn scipy seaborn tqdm tensorboard wandb -c pytorch -c conda-forge
+pip install opencv-python
 ```
 3. Our training is using wandb to record training and validation metrics. You may create an account at https://wandb.ai and follow their instruction to login on your PC.   
 
