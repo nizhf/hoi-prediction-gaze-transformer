@@ -71,8 +71,8 @@ Train with the best hyperparameter:
 You should replace those `$param` to your dataset path and desired output path. You may check `misc_script/final_exp_ag.sh` as an example.  
 
 # Evaluation
-You can use the model weights trained by yourself, or download our best model from [the same link as before](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Ev6sVnE0y2VBnmJ4RD65W7EB7PVDuGQ68Ybkaj31dGCUow?e=t29y5C), put them to `$project/$name/weights/`. Replace $project and $run_name to you desired output path. Different future time should have different $name (see [Training](#training) section).  
-Or we also provide all our result JSON files [here](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Es96DJ9SPRlOqfqqkdfQQrEBOzrqRvSVRX9fbgU8aS6hoA?e=DuoVnf). You can then skip to [Compute Metrics](#compute-metrics) section.
+You can use the model weights trained by yourself, or download our best model from [the same link as before](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Ev6sVnE0y2VBnmJ4RD65W7EB9jv0GlxkjgKmalvWMYwEDA), put them to `$project/$name/weights/`. Replace $project and $run_name to you desired output path. Different future time should have different $name (see [Training](#training) section).  
+Or we also provide all our result JSON files [here](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Es96DJ9SPRlOqfqqkdfQQrEBy4Z-4nSN40xnu3rh6_N8Ng). You can then skip to [Compute Metrics](#compute-metrics) section.
 ## On VidHOI
 ### Generate Inference Results
 Oracle mode:  
