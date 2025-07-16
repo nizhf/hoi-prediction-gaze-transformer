@@ -32,7 +32,7 @@ pip install opencv-python
 3. Our training is using wandb to record training and validation metrics. You may create an account at https://wandb.ai and follow their instruction to login on your PC.   
 
 # Inference on an arbitrary video
-1. Some weights can be downloaded automatically. Some weights need to be downloaded manually from [here](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Ev6sVnE0y2VBnmJ4RD65W7EB7PVDuGQ68Ybkaj31dGCUow?e=t29y5C): all weights in weights/sttrangaze, weights/yolov5/vidor_yolov5l.pt. Put them into weights/... folder in this repo. Also, if automatic download does not work, you can download them from the same link. 
+1. Some weights can be downloaded automatically. Some weights need to be downloaded manually from [here](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Ev6sVnE0y2VBnmJ4RD65W7EB9jv0GlxkjgKmalvWMYwEDA): all weights in weights/sttrangaze, weights/yolov5/vidor_yolov5l.pt. Put them into weights/... folder in this repo. Also, if automatic download does not work, you can download them from the same link. 
 2. Run the run.py script
 ```
 # Detection
