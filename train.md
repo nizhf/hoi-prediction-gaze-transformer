@@ -28,7 +28,7 @@ Following the original repository: https://github.com/coldmanck/VidHOI
 2. Use the `dump_frames.py` in the toolkit to extract frames to `somewhere/action_genome/frames/`. You should pass the correct path to the script. You need ffmpeg to execute this script.  
  
 # Object Detection and Gaze Features
-1. Download our YOLOv5 weights `vidor_yolov5l.pt` from [this link](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Ev6sVnE0y2VBnmJ4RD65W7EB7PVDuGQ68Ybkaj31dGCUow?e=t29y5C), put it in `weights/yolov5/`
+1. Download our YOLOv5 weights `vidor_yolov5l.pt` from [this link](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Ev6sVnE0y2VBnmJ4RD65W7EB9jv0GlxkjgKmalvWMYwEDA), put it in `weights/yolov5/`
 2. Use `misc_scripts/vidhoi_yolov5_deepsort_gaze_extraction.ipynb` and `misc_scripts/vidhoi_gt_gaze_extraction.ipynb` to extract gaze features for training and validation on VidHOI dataset. You may need to modify the dataset path and output path
 3. The script will automatically download some weights for DeepSORT and Gaze Following.
 4. Similarly, use `misc_scripts/ag_gt_gaze_extraction.ipynb` to extract gaze features for Action Genome dataset.  
