@@ -28,7 +28,7 @@ Following the original repository: https://github.com/coldmanck/VidHOI
 2. Use the `dump_frames.py` in the toolkit to extract frames to `somewhere/action_genome/frames/`. You should pass the correct path to the script. You need ffmpeg to execute this script.  
  
 # Object Detection and Gaze Features
-1. Download our YOLOv5 weights `vidor_yolov5l.pt` from [this link](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Ev6sVnE0y2VBnmJ4RD65W7EBZ_CwmSLIj7TEELrQldzo1A), put it in `weights/yolov5/`
+1. Download our YOLOv5 weights `vidor_yolov5l.pt` from [this link](https://drive.google.com/drive/folders/1-5a4yFSC0V8R-jhmypLfM3xOlUJRXapl?usp=sharing), put it in `weights/yolov5/`
 2. Use `misc_scripts/vidhoi_yolov5_deepsort_gaze_extraction.ipynb` and `misc_scripts/vidhoi_gt_gaze_extraction.ipynb` to extract gaze features for training and validation on VidHOI dataset. You may need to modify the dataset path and output path
 3. The script will automatically download some weights for DeepSORT and Gaze Following.
 4. Similarly, use `misc_scripts/ag_gt_gaze_extraction.ipynb` to extract gaze features for Action Genome dataset.  
@@ -71,8 +71,8 @@ Train with the best hyperparameter:
 You should replace those `$param` to your dataset path and desired output path. You may check `misc_script/final_exp_ag.sh` as an example.  
 
 # Evaluation
-You can use the model weights trained by yourself, or download our best model from [the same link as before](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Ev6sVnE0y2VBnmJ4RD65W7EBZ_CwmSLIj7TEELrQldzo1A), put them to `$project/$name/weights/`. Replace $project and $run_name to you desired output path. Different future time should have different $name (see [Training](#training) section).  
-Or we also provide all our result JSON files [here](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Es96DJ9SPRlOqfqqkdfQQrEBK6xdQBEc9-iNl0WiShFQrg). You can then skip to [Compute Metrics](#compute-metrics) section.
+You can use the model weights trained by yourself, or download our best model from the [same link as before](https://drive.google.com/drive/folders/1-5a4yFSC0V8R-jhmypLfM3xOlUJRXapl?usp=sharing), put them to `$project/$name/weights/`. Replace $project and $run_name to you desired output path. Different future time should have different $name (see [Training](#training) section).  
+Or we also provide all our result JSON files [here](https://drive.google.com/drive/folders/1-5a4yFSC0V8R-jhmypLfM3xOlUJRXapl?usp=sharing). You can then skip to [Compute Metrics](#compute-metrics) section.
 ## On VidHOI
 ### Generate Inference Results
 Oracle mode:  
