@@ -1,4 +1,4 @@
-# Human-Object Interaction Prediction
+# Human-Object Interaction Prediction in Videos through Gaze Following
 ## Introduction
 The official implementation of our paper "Human-Object Interaction Prediction in Videos through Gaze Following" accepted by CVIU with doi: https://doi.org/10.1016/j.cviu.2023.103741. ArXiv preprint available: https://arxiv.org/abs/2306.03597.
 ## Our results
@@ -32,7 +32,7 @@ pip install opencv-python
 3. Our training is using wandb to record training and validation metrics. You may create an account at https://wandb.ai and follow their instruction to login on your PC.   
 
 # Inference on an arbitrary video
-1. Some weights can be downloaded automatically. Some weights need to be downloaded manually from [here](https://tumde-my.sharepoint.com/:f:/g/personal/zhifan_ni_tum_de/Ev6sVnE0y2VBnmJ4RD65W7EBZ_CwmSLIj7TEELrQldzo1A): all weights in weights/sttrangaze, weights/yolov5/vidor_yolov5l.pt. Put them into weights/... folder in this repo. Also, if automatic download does not work, you can download them from the same link. 
+1. Some weights can be downloaded automatically. Some weights need to be downloaded manually from [here](https://drive.google.com/drive/folders/1-5a4yFSC0V8R-jhmypLfM3xOlUJRXapl?usp=sharing): all weights in weights/sttrangaze, weights/yolov5/vidor_yolov5l.pt. Put them into weights/... folder in this repo. Also, if automatic download does not work, you can download them from the same link. 
 2. Run the run.py script
 ```
 # Detection
